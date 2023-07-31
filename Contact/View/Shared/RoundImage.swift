@@ -19,8 +19,7 @@ struct RoundImage: View {
             .aspectRatio(contentMode: .fill)
             .clipShape(Circle()
             .offset(y: -30))
-            .overlay(Circle()
-            .stroke(Color.black,lineWidth: 0.5)
+            .overlay(Circle().stroke(Color.black,lineWidth: 0.5)
             .offset(y: -30))
             .frame(width: 200, height: 200)
             .frame(maxWidth: .infinity)
@@ -32,5 +31,8 @@ struct RoundImage: View {
 struct RoundImage_Previews: PreviewProvider {
     static var previews: some View {
         RoundImage(image: UIImage(imageLiteralResourceName: "bruce"))
+            .padding()
+            .previewLayout(.sizeThatFits)
+            
     }
 }
