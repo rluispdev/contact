@@ -16,3 +16,4 @@ struct Contact {
     var phone: String
     
 }
+
