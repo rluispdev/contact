@@ -24,11 +24,11 @@ struct EditableRowView: View {
     }
 }
 
-struct EditableRowView_Previews: PreviewProvider {
-    static let contact = TestData.contact
-    
-    static var previews: some View {
-        EditableRowView(title: "Name", text: .constant(contact.name))
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct EditableRowView_Previews: PreviewProvider {
+//    static let contact = TestData.contact
+//    
+//    static var previews: some View {
+//        EditableRowView(title: "Name", text: .constant(contact.name))
+//            .previewLayout(.sizeThatFits)
+//    }
+//}

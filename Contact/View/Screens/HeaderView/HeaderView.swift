@@ -13,7 +13,6 @@ struct HeaderView: View {
     let name: String
     let position: String
     
-
     var body: some View {
         VStack {
             RoundImage(image: photo)
@@ -29,10 +28,10 @@ struct HeaderView: View {
     }
 }
 
-struct HeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        HeaderView(photo: UIImage(imageLiteralResourceName: "bruce"), name: "Bruce Wayne", position: "Wayne Enterprises")
-            .padding()
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct HeaderView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HeaderView(photo: UIImage(imageLiteralResourceName: "bruce"), name: "Bruce Wayne", position: "Wayne Enterprises")
+//            .padding()
+//            .previewLayout(.sizeThatFits)
+//    }
+//}
