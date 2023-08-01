@@ -13,8 +13,13 @@ struct ContactApp: App {
     
     var body: some Scene {
         WindowGroup {
-            DetailView(stateController: stateController)
-                .environment(\.colorScheme, .dark)
+            NavigationStack {
+                DetailView()
+                    .environmentObject( stateController)
+            }
+            
+            .environment(\.colorScheme, .dark)
         }
+
     }
 }
