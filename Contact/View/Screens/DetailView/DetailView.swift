@@ -12,12 +12,13 @@ struct DetailView: View {
     @State private var isSheetPresented = false
     
     var contact: Contact { stateController.contact }
-    
+
     var body: some View {
         List {
             HeaderView(photo: contact.photo, name: contact.name, position: contact.position)
                 .frame(maxWidth: .infinity)
             RowView(label: "Email", text: contact.email, destination: URL(string: "mailto:\(contact.email)")!)
+            RowView(label: "Phone", text: contact.phone, destination: URL(string: "tel://\(contact.phone)")!)
         }
         .listStyle(PlainListStyle())
         .navigationTitle("Contact Details")
@@ -27,7 +28,6 @@ struct DetailView: View {
         .fullScreenCover(isPresented: $isSheetPresented) {
             NavigationView {
                 EditContactView()
-              
             }
             .environment(\.colorScheme, .dark)
         }
@@ -35,14 +35,16 @@ struct DetailView: View {
 }
 
 struct DetailView_Previews: PreviewProvider {
-  
+    static let contact = TestData.contact
+
     static var previews: some View {
-        DetailView()
-            .environmentObject(StateController())
+        Group {
+            Group {
+                HeaderView(photo: contact.photo, name: contact.name, position: contact.position)
+                RowView(label: "Email", text: contact.email, destination: URL(string: "example.com")!)
+            }
+            .padding()
+            .previewLayout(.sizeThatFits)
+        }
     }
 }
-    
-
-
-
-

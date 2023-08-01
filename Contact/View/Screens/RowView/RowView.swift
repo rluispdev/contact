@@ -25,23 +25,23 @@ struct RowView: View {
         .padding(.top, 4)
     }
 }
-
-struct RowView_Previews: PreviewProvider {
-    static let contact = TestData.contact
-      static var previews: some View {
-          
-          Group {
-              
-              if let url = URL(string: "example.com") {
-             
-                  RowView(label: "Email", text: contact.email, destination: url)
-              } else {
-                  Text("URL inválido")
-              }
-          }
-          .padding()
-          .previewLayout(.sizeThatFits)
-          
-      }
-    
-}
+//
+////struct RowView_Previews: PreviewProvider {
+////    static let contact = TestData.contact
+////      static var previews: some View {
+////
+////          Group {
+////
+////              if let url = URL(string: "example.com") {
+////
+////                  RowView(label: "Email", text: contact.email, destination: url)
+////              } else {
+////                  Text("URL inválido")
+////              }
+////          }
+////          .padding()
+////          .previewLayout(.sizeThatFits)
+////
+////      }
+////
+//}

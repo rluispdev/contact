@@ -28,8 +28,7 @@ struct RoundImage: View {
 
 struct RoundImage_Previews: PreviewProvider {
     static var previews: some View {
-        RoundImage(image: UIImage(imageLiteralResourceName: "bruce"))
-            .padding()
+        RoundImage(image: TestData.contact.photo)
             .previewLayout(.sizeThatFits)
             
     }
