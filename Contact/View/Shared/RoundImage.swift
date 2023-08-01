@@ -17,10 +17,8 @@ struct RoundImage: View {
 
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .clipShape(Circle()
-            .offset(y: -30))
-            .overlay(Circle().stroke(Color.black,lineWidth: 0.5)
-            .offset(y: -30))
+            .clipShape(Circle())
+            .overlay(Circle().stroke(Color.black,lineWidth: 0.5))
             .frame(width: 200, height: 200)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 24)
