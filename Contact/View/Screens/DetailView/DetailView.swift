@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct DetailView: View {
+    
+    @ObservedObject var stateController: StateController
     let contact = TestData.contact
     @State private var isSheetPresented = false
     
-    
+    var contatc: Contact { stateController.contact}
     var body: some View {
         List {
             HeaderView(photo: contact.photo, name: contact.name, position: contact.position)

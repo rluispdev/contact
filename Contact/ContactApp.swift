@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ContactApp: App {
+    @StateObject private var stateController = StateController()
+    
     var body: some Scene {
         WindowGroup {
-           DetailView()
+            DetailView(stateController: stateController)
         }
     }
 }
