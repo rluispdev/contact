@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DetailView: View {
     let contact = TestData.contact
+    @State private var isSheetPresented = false
+    
     
     var body: some View {
         List {
@@ -18,6 +20,14 @@ struct DetailView: View {
             RowView(label: "Phone", text: contact.phone, destination: URL(string: "tel://\(contact.phone)")!)
         }
         .listStyle(PlainListStyle())
+        .toolbar {
+            Button("Edit", action: { isSheetPresented = true })
+        }
+        .fullScreenCover(isPresented: $isSheetPresented) {
+            NavigationStack {
+                EditContactView()
+            }
+        }
     }
 }
 
