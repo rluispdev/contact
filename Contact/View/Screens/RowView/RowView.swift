@@ -22,7 +22,7 @@ struct RowView: View {
             Link(text, destination: destination)
                 .buttonStyle(BorderedButtonStyle())
         }
-        .padding(.top, 8)
+        .padding(.top, 4)
     }
 }
 

@@ -11,7 +11,7 @@ import SwiftUI
 struct ContactApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+           DetailView()
         }
     }
 }
