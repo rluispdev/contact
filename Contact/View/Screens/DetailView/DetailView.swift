@@ -29,6 +29,7 @@ struct DetailView: View {
             NavigationStack {
                 EditContactView()
             }
+            .environment(\.colorScheme, .dark)
         }
     }
 }

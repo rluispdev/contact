@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct EditContactView: View {
-    
     @State private var draft: Contact = TestData.contact
+    @Environment(\.presentationMode) private var presentationMode
     
     var body: some View {
         List {
@@ -19,6 +19,24 @@ struct EditContactView: View {
             EditableRowView(title: "Email", text: $draft.email)
             EditableRowView(title: "Phone", text: $draft.phone)
         }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button("Cancel", action: cancel)
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Save", action: save)
+            }
+        }
+    }
+}
+
+extension EditContactView {
+    func save() {
+        presentationMode.wrappedValue.dismiss()
+    }
+    
+    func cancel() {
+        presentationMode.wrappedValue.dismiss()
     }
 }
 
