@@ -18,7 +18,7 @@ struct DetailView: View {
             HeaderView(photo: contact.photo, name: contact.name, position: contact.position)
                 .frame(maxWidth: .infinity)
             RowView(label: "Email", text: contact.email, destination: URL(string: "mailto:\(contact.email)")!)
-            RowView(label: "Phone", text: contact.phone, destination: URL(string: "tel://\(contact.phone)")!)
+            RowView(label: "Phone", text: contact.phone, destination: URL(string: "tel:\(contact.phone)")!)
         }
         .listStyle(PlainListStyle())
         .navigationTitle("Contact Details")
@@ -39,12 +39,15 @@ struct DetailView_Previews: PreviewProvider {
 
     static var previews: some View {
         Group {
-            Group {
-                HeaderView(photo: contact.photo, name: contact.name, position: contact.position)
-                RowView(label: "Email", text: contact.email, destination: URL(string: "example.com")!)
-            }
-            .padding()
+        
+                Group {
+                    HeaderView(photo: contact.photo, name: contact.name, position: contact.position)
+                    RowView(label: "Email", text: contact.email, destination: URL(string: "example.com")!)
+               
+                
+                .padding()
             .previewLayout(.sizeThatFits)
+            }
         }
     }
 }
