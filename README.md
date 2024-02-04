@@ -10,7 +10,7 @@ Tela de app que exibe um contato que pode ser editado pelo usuário. O código i
 - `EnvironmentObject:` : Usar o @EnvironmentObject para compartilhar um objeto de estado entre várias partes da interface.
 -  `Navigation:` : Utilizar  navegação entre telas usando NavigationView, fullScreenCover e botões de navegação.
 -  `Link and Buttons` :  Usar Link,  para criar links clicáveis e aplicação de botões com estilos personalizados.
--  - `Custom Views`: Criar views personalizadas como RoundImage, HeaderView, RowView e EditableRowView.
+- `Custom Views`: Criar views personalizadas como RoundImage, HeaderView, RowView e EditableRowView.
 - `Extensions` : Definir de extensões para adicionar funcionalidade aos tipos existentes, como o EditContactView.
 - `Data Model` : Criar  um modelo de dados (Contact e TestData) para armazenar informações dos contatos.
 - `ObservableObject` : Usar ObservableObject para criar um objeto de estado observável.
