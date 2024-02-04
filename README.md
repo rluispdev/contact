@@ -25,7 +25,7 @@ Tela de app que exibe um contato que pode ser editado pelo usuário. O código i
 - ``SwiftUI``
 
 ## 📁 Acesso ao projeto
-Você pode acessar os arquivos do projeto clicando [aqui]( https://github.com/rluispdev/100DaysOfSwift/tree/main/Project100DaysSwift.playground).
+Você pode acessar os arquivos do projeto clicando [aqui](https://github.com/rluispdev/contact/tree/main/Contact).
           
           
  
